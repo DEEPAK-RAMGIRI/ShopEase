@@ -24,5 +24,15 @@ router.post('/add', async (req, res) => {
 
 // ... (other product routes like update and delete) ...
 
+// DELETE: Delete a product
+router.delete('/:id', async (req, res) => {
+    try {
+        await Product.findByIdAndDelete(req.params.id);
+        res.json('Product deleted.');
+    } catch (err) {
+        res.status(400).json('Error: ' + err);
+    }
+});
+
 // This line is essential for a route file
 module.exports = router;

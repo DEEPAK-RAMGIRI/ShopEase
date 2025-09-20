@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 // MongoDB Connection
-const MONGO_URI = 'mongodb://127.0.0.1:27017/ShopEase';
+const MONGO_URI = 'mongodb://127.0.0.1:27017/shopEase';
 
 mongoose.connect(MONGO_URI)
   .then(() => console.log("MongoDB connected successfully."))
