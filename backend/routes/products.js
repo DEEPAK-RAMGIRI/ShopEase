@@ -22,9 +22,6 @@ router.post('/add', async (req, res) => {
     }
 });
 
-// ... (other product routes like update and delete) ...
-
-// DELETE: Delete a product
 router.delete('/:id', async (req, res) => {
     try {
         await Product.findByIdAndDelete(req.params.id);

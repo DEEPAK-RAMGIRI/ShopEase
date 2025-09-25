@@ -1,0 +1,101 @@
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  right: 0;
+  left: 0;
+  background: aliceblue;
+  box-shadow: 0 0 10px aliceblue;
+  z-index: 1000;
+  padding: 10px 20px;
+}
+
+.logo img {
+  width: 50px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+   filter: drop-shadow(2px 2px 5px black);
+}
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+  font-weight: 800;      
+  font-style: normal;     
+  text-transform: uppercase; 
+}
+
+nav ul li a {
+  opacity: 0;
+  animation: slideTop 0.5s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  /* font-weight: 800;  bold */
+  font-size: 20px;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+
+.icon {
+  font-size: 25px;
+  color: black;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: orange;
+  background-color: aliceblue;
+}
+
+.icon:hover {
+  background-color: aliceblue;
+  border-radius: 5px;
+  transform: scale(1.1); 
+} 
+
+
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+
+  nav .menu-toggle {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    background-color: aliceblue;
+    text-align: center;
+    display: none;  
+  }
+
+  nav ul.active {
+    display: flex; 
+  }
+
+  nav ul li {
+    margin: 15px 0;
+  }
+}

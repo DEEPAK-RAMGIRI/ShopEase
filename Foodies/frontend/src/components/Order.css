@@ -1,0 +1,135 @@
+.order {
+  width: 100%;
+  height:auto;
+  padding: 70px 0;
+  background: aliceblue;
+  border-radius: 150px;
+}
+
+.order h1 {
+    font: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Playwrite HR", cursive;
+  font-size: 55px;
+  padding-top: 0px;
+}
+
+.order h1 span {
+    font: bold;
+  font-family: "Playwrite HR", cursive;
+  /* margin-left: 15px; */
+}
+
+.order .Baatha {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.order .Baatha .order_img img {
+  width: auto;
+  filter: drop-shadow(10px 0 20px black);
+}
+
+.order .Baatha form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0 10px;
+}
+
+.order .Baatha .input {
+  margin: 5px;
+}
+
+.order .Baatha .input p {
+  line-height: 22px;
+  font-weight: 200;
+}
+
+.order .Baatha form .input input {
+  height: 35px;
+  width: 300px;
+  padding: 0 10px;
+  border: 2px solid aliceblue;
+  color: orange;
+  border-radius: 5px;
+  outline: none;
+  background: transparent;
+}
+
+.order .Baatha form .input input:focus {
+  border: 2px solid orange;
+}
+
+.order .Baatha form .submit {
+  padding: 10px 0;
+  color: white;
+  width: 40%;
+  text-align: center;
+  margin-top: 20px;
+  background: orange;
+  text-decoration: none;
+  outline: none;
+  border-radius: 100px;
+  align-items: center;
+  display: block;
+}
+
+
+
+@media (max-width: 1024px) {
+  .order .Baatha {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .order .Baatha .order_img img {
+    width: 80%;
+    max-width: 400px;
+  }
+
+  .order .Baatha form {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .order .Baatha .input input {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .order .Baatha form .summit {
+    width: 60%;
+  }
+}
+
+@media (max-width: 600px) {
+  .order {
+    padding: 40px 10px;
+    border-radius: 60px;
+    height: auto;
+  }
+
+  .order h1 {
+    font-size: 35px;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .order .Baatha .order_img img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .order .Baatha .input input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .order .Baatha form .summit {
+    width: 80%;
+    padding: 10px;
+  }
+}

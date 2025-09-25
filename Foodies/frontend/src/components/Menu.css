@@ -1,0 +1,137 @@
+.menu {  
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu h1 {
+    font-family: "Playwrite HR", cursive;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+    width: 100%;
+}
+
+.menu span {
+    font-family: "Playwrite HR", cursive;
+    color: #800000; 
+}
+
+.menu .menu_box {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px 40px;
+    justify-content: center;
+}
+
+.menu .menu_box .menu_card {
+    width: 100%;
+    max-width: 280px;
+    height: 400px;
+    padding-top: 10px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -10px, 
+                /* rgba(0, 0, 0, 0.3) 0px 18px 36px -18px,  */
+                rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu .menu_box .menu_card .menu_img {
+    width: 260px;
+    height: 200px;
+    margin: 0 auto;
+    overflow: hidden;
+      border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.menu .menu_box .menu_card .menu_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.1s;
+}
+
+.menu .menu_box .menu_card .menu_img:hover img {
+    transform: scale(1.1);
+}
+
+.menu .menu_box .menu_card .menu_info {
+    padding: 10px 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu .menu_box .menu_card .menu_info h2 {
+    width: 60%;
+    text-align: center;
+    margin: 10px auto;
+    font-size: 20px;
+    color: orange;
+}
+
+.menu .menu_box .menu_card .menu_info h3 {
+    text-align: center;
+    font-size: 25px;
+}
+
+.menu .menu_box .menu_card .menu_info .menu_star {
+    color: #fac013;
+    text-align: center;
+    margin: 10px 0 20px 0;
+    font-size: 20px;
+}
+
+.menu .menu_box .menu_card .menu_info .menu_btn {
+    position: relative;
+    top: -10px; /* 👈 moves button slightly upward */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #800000;
+    padding: 10px 15px;
+    margin: 0 auto;
+    transition: 0.3s;
+    text-decoration: none;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+.menu .menu_box .menu_card .menu_info .menu_btn:hover {
+    box-shadow: 0 0 5px maroon,
+                0 0 25px maroon,
+                0 0 50px #f0f9f0,   
+                0 0 75px #f0f9f0,
+                0 0 100px aliceblue;  
+}
+
+@media (max-width: 1024px) {
+  .menu .menu_box {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu .menu_box {
+    grid-template-columns: 1fr;
+  }
+
+  .menu .menu_box .menu_card {
+    width: 90%;
+    margin: auto;
+  }
+}

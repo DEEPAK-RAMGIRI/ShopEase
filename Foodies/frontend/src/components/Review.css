@@ -1,0 +1,135 @@
+.review {
+    width: 100%;
+    height: auto;
+    padding: 70px 0;
+}
+
+.review h1 {
+    font-size: 45px;
+    font-family: "Playwrite HR", cursive;
+    font-weight: bolder;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.review h1 span {
+    font-family: "Playwrite HR", cursive;
+    margin-left: 10px;
+    color: maroon;
+}
+
+.review .reviewers {
+    gap: 10px;
+    width: 95%;
+    margin: 70px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;    
+}
+
+.review .reviewers .review-card {
+    background: aliceblue;
+    width: 23%;
+    min-width: 260px;
+    height: auto;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 50px;
+    padding: 20px;
+    position: relative;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review .reviewers .review-card:hover {
+    transform: translateY(-20px);
+}
+
+.review .reviewers .review-card .profile {
+    display: flex;
+    align-items: center;
+    justify-content: justify;
+}
+
+.review .reviewers .review-card .profile img {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    border: 5px solid maroon;
+}
+
+.review .reviewers .review-card .name {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 10px 0;
+}
+
+.review .reviewers .review-card .reviews {
+    color: #fac013;
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.review .reviewers .review-card .opi {
+    line-height: 20px;
+    text-align: justify;
+    font-size: 15px;
+    padding: 0 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .review .reviewers {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .review .reviewers .review-card {
+        width: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    .review {
+        padding: 40px 0;
+    }
+
+    .review h1 {
+        font-size: 30px;
+        flex-direction: column;
+    }
+
+    .review .reviewers {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .review .reviewers .review-card {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .review .reviewers .review-card .profile img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .review .reviewers .review-card .name {
+        font-size: 20px;
+    }
+
+    .review .reviewers .review-card .opi {
+        font-size: 14px;
+    }
+}

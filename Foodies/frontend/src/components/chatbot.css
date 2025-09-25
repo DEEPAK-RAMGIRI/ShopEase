@@ -1,0 +1,40 @@
+
+
+/* Optional: Resize the chatbot */
+df-messenger::part(chat-frame) {
+  width: 350px;
+  height: 450px;
+}
+
+df-messenger::part(titlebar) {
+  color: black !important;
+}
+
+df-messenger {
+  --df-messenger-button-titlebar-color: #2563eb;
+  position: fixed;
+  bottom: 80px;
+  right: 50px;
+  width: 320px;
+  height: 450px;
+  max-width: 90vw;
+  max-height: 80vh;
+  z-index: 9999;
+}
+
+/* Resize iframe inside */
+df-messenger iframe {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 12px;
+}
+
+/* Small screen adjustments */
+@media (max-width: 600px) {
+  df-messenger {
+    width: 95%;
+    height: 70vh;
+    right: 30px;
+    bottom: 70px;
+  }
+}

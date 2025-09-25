@@ -1,0 +1,112 @@
+.about {
+    width: 100%;
+    padding: 70px 20px;
+    top: 80px;
+}
+
+.about .about-us {
+    display: flex;
+    flex-direction: row;    
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.about .about-us img {
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    top: -30px;
+    padding-left: 0;
+}
+
+.about .about-us .about-text {
+    text-align: center;
+    padding: 20px;
+    max-width: 800px;
+}
+
+.about .about-us .about-text h1 {
+    font-family: "Playwrite HR", cursive;
+    font-size: 3rem;
+    position: relative;
+    margin-bottom: 10px;
+}
+    
+.about .about-us .about-text h1 span {
+    color: #800000;
+    font-family: "Playwrite HR", cursive;
+}
+
+.about .about-us .about-text p {
+    font-weight: bold;
+    line-height: 1.5;
+    padding-top: 30px;
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+.about .about-us .about-text a {
+    height: 40px;
+    width: 40px;
+    border: 2px solid maroon;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.5s ease;
+    opacity: 0;
+    animation: comein 1.5s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+    margin: 30px 15px 30px 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about .about-us .about-text a:hover {
+    background: aliceblue;
+    box-shadow: 0 0 20px maroon;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+    .about .about-us {
+        flex-direction: column;
+    }
+
+    .about .about-us .about-text p {
+        max-width: 100%;
+        padding-top: 20px;
+    }
+
+    .about .about-us .about-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .about .about-us img {
+        max-width: 300px;
+        top: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .about .about-us .about-text h1 {
+        font-size: 2rem;
+    }
+
+    .about .about-us .about-text p {
+        font-size: 0.95rem;
+        padding-top: 15px;
+    }
+
+    .about .about-us .about-text a {
+        height: 35px;
+        width: 35px;
+        font-size: 18px;
+        margin: 20px 10px;
+    }
+
+    .about .about-us img {
+        max-width: 250px;
+    }
+}
