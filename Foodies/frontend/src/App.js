@@ -7,22 +7,16 @@ import Order from "./components/Order";
 import Chatbot from "./components/chatbot";
 import './styles/global.css';
 import React, { useState } from 'react';
-import axios from "axios";
+import * as api from './api/api';
 
 function App() {
   const [cart, setCart] = useState([]);
 
-  const handleCart = async (item, price) => {
-    try{
-      const response = await axios.post("http://localhost:3000/api/cart/add",{foodname:item,rate:price,quantity:1});
-      setCart([...cart, { item, price }]);
-      alert(`${item} has been added to your cart.`);
-      console.log("Cart in DB",response.data) 
-    }catch(err){
-      console.error("Error adding into the cart:",err);
-      alert("failed to add in to the cart")
-    }
- };
+  const handleCart = (item, price) => {
+    setCart([...cart, { item, price }]);
+    alert(`${item} has been added to your cart.`);
+  };
+
   return (
     <>
     <Navbar cart={cart} />

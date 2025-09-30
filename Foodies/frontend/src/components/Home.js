@@ -2,7 +2,7 @@
   import React, { useEffect } from 'react';
 
   import '../styles/global.css';
-  import './Home.css';
+  import '../styles/Home.css';
 
 
   export default function Home() {

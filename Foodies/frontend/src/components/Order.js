@@ -1,5 +1,5 @@
-  import './Order.css'
-  import React,{useState} from 'react'
+import React,{useState} from 'react'
+import '../styles/Order.css'
 
   export default function Order({cart,setCart}) {
     const inputFields = [

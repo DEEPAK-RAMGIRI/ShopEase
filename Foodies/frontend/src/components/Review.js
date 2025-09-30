@@ -1,5 +1,5 @@
 import React from "react";
-import "./Review.css";
+import "../styles/Review.css";
 
 export default function Review() {
   const CustomerName = [
