@@ -1,12 +1,11 @@
 import React from 'react';
 import { FaShoppingCart } from "react-icons/fa";
+import {Link} from 'react-router-dom';
 import '../styles/Navbar.css';
 import '../styles/global.css';
 
-export default function Navbar({ cart, onCartToggle }) {
-  const handleLength = () => {
-    return cart && cart.length ? cart.length : 0;
-  };
+export default function Navbar({ cart}) {
+  const total = cart && cart.items ? cart.items.reduce((sum,item) => sum + item.quantity , 0): 0;
 
   return (
     <div>
@@ -35,19 +34,20 @@ export default function Navbar({ cart, onCartToggle }) {
         </ul>
 
         <div className="icon">
-          <button
+          <Link to ='/cart'
             className="btn btn-primary position-relative border-0 bg-transparent p-0"
-            style={{ boxShadow: "none", lineHeight: 0 }}
-            onClick={onCartToggle}   
+            style={{ boxShadow: "none", lineHeight: 0}}   // may be i get problem in adding link style
           >
             <FaShoppingCart size={20} color="black" style={{ verticalAlign: "middle" }} />
+            {total > 0 && (
             <span
               className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
               style={{ fontSize: "10px", padding: "4px 6px" }}
             >
-              {handleLength()}
+              {total}
             </span>
-          </button>
+            )}
+          </Link>
         </div>
       </nav>
     </div>
