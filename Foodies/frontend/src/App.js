@@ -27,7 +27,7 @@ function App() {
         setCart(cartResponse.data);
       } catch (err) {
         setError('Failed to fetch the data');
-        console.error(err);
+        // console.error(err);
       }
     };
     fetchData();
