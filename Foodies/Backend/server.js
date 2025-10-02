@@ -4,8 +4,9 @@ const cors = require('cors');
 require('dotenv').config();
 
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URI;
+
 
 const Product = require('./models/product.model');
 const apiRoutes = require('./routes/api.routes');
