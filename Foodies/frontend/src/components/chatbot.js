@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import '../styles/chatbot.css';
+import '../styles/chatbot.css'; 
+
 function App() {
   useEffect(() => {
     if (!document.querySelector('script[src*="dialogflow-console"]')) {

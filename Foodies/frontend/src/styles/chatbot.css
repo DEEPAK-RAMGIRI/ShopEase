@@ -29,6 +29,11 @@ df-messenger iframe {
   border-radius: 12px;
 }
 
+df-messenger:not(.expanded) {
+  height: 60px;
+  width: 60px;
+}
+
 /* Small screen adjustments */
 @media (max-width: 600px) {
   df-messenger {
