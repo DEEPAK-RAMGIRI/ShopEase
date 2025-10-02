@@ -11,7 +11,12 @@ const Product = require('./models/Product.model');
 const apiRoutes = require('./routes/api.routes');
 
 const app = express();
-app.use(cors());
+
+const corsOptions = {
+  origin: `http://localhost:${PORT}` 
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 mongoose.connect(MONGO_URI).then(() => {console.log("MongoDB Connected Successfully."),DataBase(    )})
