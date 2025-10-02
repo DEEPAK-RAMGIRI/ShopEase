@@ -10,6 +10,7 @@
 }
 
 body {
+   /* padding-top: 70px;  */
   background-color: #fff;
   color: #333;
   line-height: 1.6;
@@ -30,6 +31,12 @@ ul {
 
 .color {
   color: #800000;
+}
+
+.page-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
 }
 
 /* Reusable animation classes */

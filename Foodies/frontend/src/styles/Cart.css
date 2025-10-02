@@ -1,0 +1,196 @@
+/* Main container for the entire cart page */
+.cart-container {
+      /* padding-top: 70px;  */
+  /* Set a maximum width for the container */
+  max-width: 800px;
+  /* Ensure it takes up available space on smaller screens */
+  width: 100%;
+  
+  /* NOTE: The 'margin' property was removed from here. 
+     Centering is now handled by the '.page-container' wrapper in global.css 
+     to prevent the "margin collapse" issue. */
+  
+  /* Internal spacing */
+  padding: 2rem;
+  
+  /* Visual styling */
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Title styling */
+.cart-container h1 {
+
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  color: #333;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Message for when the cart is empty */
+.empty-cart-message {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  padding: 3rem 1rem;
+}
+
+/* Container for the list of cart items */
+.cart-items-list {
+  margin-bottom: 2rem;
+}
+
+/* Styling for a single item row in the cart */
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Space between elements */
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 1.5rem;
+}
+
+/* Remove border from the last item in the list */
+.cart-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+/* Product image styling */
+.product-image {
+  width: 75px;
+  height: 75px;
+  object-fit: cover; /* Prevents image distortion */
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+/* Container for product name and price */
+.item-details {
+  flex: 1; /* Allows this element to grow and take available space */
+}
+
+.item-details h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.item-details p {
+  margin: 0;
+  color: #555;
+  font-weight: bold;
+}
+
+/* Styling for the quantity increase/decrease buttons and number */
+.item-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.item-controls button {
+  width: 30px;
+  height: 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;  
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  border-radius: 50%; /* Makes buttons circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.item-controls button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.item-controls span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  min-width: 25px;
+  text-align: center;
+}
+
+/* "Remove" button styling */
+.remove-button {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.remove-button:hover {
+  background: #e60000;
+}
+
+/* Styling for the total price display */
+.cart-total {
+  text-align: right;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  border-top: 2px solid #eee;
+  padding-top: 1rem;
+}
+
+/* "Order Now" button styling */
+.order-now-button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 2rem;
+  background-color: #28a745; /* Green */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.order-now-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.order-now-button:active {
+  transform: scale(0.99); /* Slight press effect */
+}
+
+/* Media Query for smaller screens (e.g., mobile phones) */
+@media (max-width: 600px) {
+  .cart-item {
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+  }
+
+  .item-details {
+    /* Take full width on a new line if needed */
+    width: 100%; 
+    flex: auto;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .item-controls {
+    margin: 0 auto; /* Center the controls */
+  }
+  
+  .remove-button {
+    margin: 1rem auto 0; /* Center the remove button */
+  }
+}
