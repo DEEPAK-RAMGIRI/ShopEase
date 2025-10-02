@@ -4,7 +4,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3001;
 const MONGO_URI = process.env.MONGO_URI;
 
 
@@ -14,7 +14,7 @@ const apiRoutes = require('./routes/api.routes');
 const app = express();
 
 const corsOptions = {
-  origin: `http://localhost:${PORT}` 
+  origin:  process.env.CORS_ORIGIN || `http://localhost:${PORT}`, 
 };
 
 app.use(cors(corsOptions));
