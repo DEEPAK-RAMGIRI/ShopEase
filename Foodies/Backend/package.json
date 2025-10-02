@@ -5,11 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-<<<<<<< HEAD
-    "dev": "nodemon server"
-=======
     "dev": "nodemon server.js"
->>>>>>> 06fe09d8a264888ba89b6bc40974aed0aaaed12b
   },
   "keywords": [],
   "author": "",
