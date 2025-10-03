@@ -56,9 +56,10 @@ add ```.env ``` file in both frontend and backend
 Backend ```.env```
 ```
 PORT=5000
-MONGODB_URI=your mongo db url
+MONGODB_URI=your_mongo_db_url
 NODE_ENV=development
-CORS_ORIGIN = your local host or development server
+CORS_ORIGIN=your_localhost_or_backend_url
+
 ```
 
 Frontend ```.env```
@@ -120,8 +121,8 @@ Foodies/
 ### Explanation
 * Backend: Handles API endpoints, cart management, product management, and connects to MongoDB.
 * Frontend: React-based UI with components for menu browsing, cart, orders, chatbot, etc.
-* API Layer: api.js ensures all frontend requests go through a single wrapper.
-* Chatbot: Integrated via chatbot.js with Dialogflow.
+* API Layer: ```api.js``` ensures all frontend requests go through a single wrapper.
+* Chatbot: Integrated via ```chatbot.js``` with Dialogflow.
 * Styles: Organized per-component CSS for maintainability.
 * Deployment:
   *  Frontend → Vercel
